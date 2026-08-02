@@ -1,0 +1,30 @@
+class Course {
+    String courseName;
+    int credit;
+
+    Course(String courseName, int credit) {
+        this.courseName = courseName;
+        this.credit = credit;
+    }
+
+    void display() {
+        System.out.println("Course Name: " + courseName);
+        System.out.println("Credit: " + credit);
+        System.out.println();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Course[] courses = new Course[4];
+        courses[0] = new Course("Data Structure", 3);
+        courses[1] = new Course("Algorithm", 3);
+        courses[2] = new Course("Java", 3);
+        courses[3] = new Course("Java Lab", 1);
+
+        System.out.println("Registered Courses: ");
+        for (Course c : courses) {
+            c.display();
+        }
+    }
+ }
