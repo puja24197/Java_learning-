@@ -1,0 +1,41 @@
+public class Makeup {
+    String brand;
+    double price;
+
+    Makeup() {
+        brand = "Unknown";
+        price = 0.0;
+    }
+
+    Makeup(String b, double p) {
+        brand = b;
+        price = p;
+    }
+
+    Makeup(Makeup m) {
+        this.brand = m.brand;
+        this.price = m.price;
+    }
+
+    void display() {
+        System.out.println("Brand: " + brand + ", Price: " + price);
+    }
+
+}
+public class Main {
+    public static void main(String[] args) {
+
+        Makeup makeup1 = new Makeup();
+        Makeup makeup2 = new Makeup("Swiss Beauty", 2000.0);
+        Makeup makeup3 = new Makeup(makeup2);
+
+        System.out.println("Makeup 1:");
+        makeup1.display();
+
+        System.out.println("Makeup 2:");
+        makeup2.display();
+
+        System.out.println("Makeup 3 (Copied):");
+        makeup3.display();
+    }
+}
