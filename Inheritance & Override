@@ -1,0 +1,25 @@
+ class Mother {
+    String saree = "Mother's Saree";
+    void show() {
+    System.out.println("This is Mother");
+    }
+}
+class Daughter extends Mother {
+ String saree = "Daughter's Saree";
+
+    @Override
+    void show() {
+    System.out.println("This is Daugther");
+    }
+    void display() {
+        System.out.println(this.saree); 
+        System.out.println(super.saree); 
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Daughter Puja = new Daughter();
+        Puja.show();     
+        Puja.display();  
+    }
+}
