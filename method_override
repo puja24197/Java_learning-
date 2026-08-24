@@ -1,0 +1,45 @@
+// Parent Class
+class SkinCare {
+    void GlowSkin() {
+        System.out.println("Getting enough sleep makes skin glow.");
+    }
+}
+
+// Child Class 1
+class Morning extends SkinCare {
+    @Override
+    void GlowSkin() {
+        System.out.println("Serum is used for glowing skin.");
+        System.out.println("Sunscreen is used to protect from suntan.");
+    }
+}
+
+// Child Class 2
+class Evening extends SkinCare {
+    @Override
+    void GlowSkin() {
+        System.out.println("Wash face and apply toner.");
+    }
+}
+
+// Child Class 3
+class Night extends SkinCare {
+    @Override
+    void GlowSkin() {
+        System.out.println("Moisturizer is used for hydration.");
+        System.out.println("Eye cream is used for dark circles.");
+    }
+}
+
+// Main Execution Class (Only this class is public)
+public class Main {
+    public static void main(String[] args) {
+        SkinCare morning = new Morning();
+        SkinCare evening = new Evening();
+        SkinCare night = new Night();
+
+        morning.GlowSkin();
+        evening.GlowSkin();
+        night.GlowSkin();
+    }
+}
